@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cctvafq20vegr"]
+[gd_scene load_steps=10 format=3 uid="uid://cctvafq20vegr"]
 
 [ext_resource type="Texture2D" uid="uid://ji72heqn2stt" path="res://art/parallax1.png" id="1_04qyp"]
 [ext_resource type="Texture2D" uid="uid://616rmlfe5x63" path="res://art/parallax2.png" id="2_j7wrs"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://pnh0x80ksgxf" path="res://art/parallax4.png" id="4_hh0fu"]
 [ext_resource type="Texture2D" uid="uid://dgkcx3utows4d" path="res://icon.svg" id="5_3m5ht"]
 [ext_resource type="Script" uid="uid://271cvmc7fnij" path="res://scripts/player.gd" id="5_j7wrs"]
+[ext_resource type="PackedScene" uid="uid://gkrufjct43nb" path="res://scenes/tile_map_layer.tscn" id="7_fws66"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dubn7"]
 size = Vector2(32, 32)
@@ -16,10 +17,11 @@ size = Vector2(4406, 24)
 [node name="World" type="Node2D"]
 
 [node name="parallar" type="Node2D" parent="."]
+position = Vector2(-5, -67)
 
 [node name="Parallax2D" type="Parallax2D" parent="parallar"]
 scroll_scale = Vector2(0.2, 0.2)
-repeat_size = Vector2(720, 0)
+repeat_size = Vector2(720, 480)
 
 [node name="Sprite2D" type="Sprite2D" parent="parallar/Parallax2D"]
 position = Vector2(302, 170)
@@ -72,3 +74,5 @@ position = Vector2(6, 50)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(319, 297)
 shape = SubResource("RectangleShape2D_fws66")
+
+[node name="TileMapLayer" parent="." instance=ExtResource("7_fws66")]
