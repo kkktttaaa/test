@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cctvafq20vegr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "hello"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 46.0
+offset_right = 66.0
+offset_bottom = 69.0
+text = "hello 2w"
